@@ -1,0 +1,992 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f1f1f1 !important;
+  font-family: "Open Sans", sans-serif !important;
+}
+
+::-webkit-scrollbar {
+  width: 7px !important;
+  height: 7px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3872fae0;
+}
+
+.info a h6 {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  color: #000;
+  width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.info a:hover {
+  text-decoration: unset;
+}
+
+.info a:hover h6 {
+  color: #2bbef9;
+}
+
+.tableList .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root {
+  padding: 0px !important;
+}
+
+.tableList .btnActions .css-aixiz9-MuiButtonBase-root-MuiIconButton-root {
+  padding: 0px !important;
+  width: 100%;
+  height: 100%;
+}
+
+.tableList .btnActions {
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+.tableList .btnActions button svg {
+  font-size: 19px;
+  color: #fff;
+}
+
+.productCell {
+  display: flex;
+  align-items: center; /* Căn giữa tất cả nội dung của ô theo chiều dọc */
+  height: 100%; /* Đảm bảo chiều cao của cell là 100% hàng */
+}
+
+.imgWrapper {
+  width: 60px; /* Đặt kích thước ảnh cố định */
+  height: 60px;
+  border-radius: 8px; /* Bo góc ảnh */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.productName {
+  font-size: 14px; /* Giảm kích thước chữ để gọn hơn */
+  color: #333;
+  font-weight: 500;
+}
+
+.card h1 {
+  font-size: 18px;
+  font-weight: 500 !important;
+}
+
+.btn-sm {
+  padding: 4px 15px !important;
+  font-size: 13px !important;
+}
+
+.btn-sm svg {
+  font-size: 18px !important;
+  margin-right: 5px;
+}
+
+.btn-border {
+  border: 1px solid rgba(0, 0, 0, 0.3) !important;
+  color: #000 !important;
+  text-transform: capitalize !important;
+  padding: 7px 20px !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-border:hover {
+  background-color: #2c78e5;
+  color: #fff !important;
+  border: 1px solid transparent !important;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.productList h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.space {
+  margin-top: 130px;
+}
+
+.main .sidebarWrapper .sidebar {
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.main .sidebarWrapper .sidebar img {
+  height: 70px;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs {
+  height: 100%;
+  /* overflow-x: hidden; */
+  /* overflow-y: scroll; */
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs ul {
+  width: 100%;
+  margin-bottom: 0px;
+  max-height: 90vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs ul::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs ul::-webkit-scrollbar-thumb {
+  background: #3872fa;
+  border-radius: 10px;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs ul li {
+  list-style: none;
+  width: 100%;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs ul:hover li:first-child button {
+  background-color: #222 !important;
+  color: #fff;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs button {
+  color: #5e5d72;
+  text-transform: capitalize;
+  font-size: 13px;
+  font-weight: 600;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs button::before {
+  content: "";
+  width: 5px;
+  height: 0%;
+  background-color: #3872fa;
+  left: 0;
+  top: 50%;
+  position: absolute;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.5);
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs li > button:hover::before,
+.main .sidebarWrapper .sidebar .sidebarTabs li > button.active::before {
+  height: 100%;
+  top: 0;
+  opacity: 1;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs button.active,
+.main .sidebarWrapper .sidebar .sidebarTabs button.active * {
+  color: #3872fa;
+}
+.main .sidebarWrapper .sidebar .sidebarTabs button:hover {
+  background-color: #f1f1f1;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs ul li button svg {
+  font-size: 21px;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs ul li button svg.angleIcon {
+  transform: rotate(-270deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs li .submenu li {
+  position: relative;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs li .submenu > button::before {
+  display: none;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs li .submenu button {
+  padding: 5px 5px 5px 33px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs li .submenu button::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: 2px solid #000;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 7%;
+}
+
+.main .sidebarWrapper .sidebar .sidebarTabs li .submenuWrapper {
+  transition: all 0.3s;
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+}
+.main
+  .sidebarWrapper
+  .sidebar
+  .sidebarTabs
+  li
+  .submenuWrapper.colapsed
+  .submenu {
+  opacity: 0;
+}
+.main .sidebarWrapper .sidebar .sidebarTabs li .submenuWrapper.colapse {
+  height: auto;
+  overflow: inherit;
+  opacity: 1;
+  padding: 5px 0px 0px 0px;
+}
+.main
+  .sidebarWrapper
+  .sidebar
+  .sidebarTabs
+  li
+  .submenuWrapper.colapse
+  .submenu {
+  opacity: 1;
+  height: auto;
+}
+
+/* Dashboard box */
+.dashboardBoxWrapper {
+  gap: 15px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dashboardBoxWrapper .dashboardBox {
+  width: 32.3%;
+  height: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left !important;
+  position: relative;
+  color: #fff;
+  text-transform: capitalize !important;
+}
+
+.dashboardBoxWrapper .dashboardBox .chart {
+  opacity: 0.05;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.dashboardBoxWrapper .dashboardBox .chart svg {
+  font-size: 110px;
+  color: #000;
+}
+
+.dashboardBoxWrapper .dashboardBox .col1 h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dashboardBoxWrapper .dashboardBox .col1 span {
+  font-size: 35px !important;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.dashboardBoxWrapper .dashboardBox .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom right, #0000, #0000004d);
+}
+
+.dashboardBoxWrapper .dashboardBox .icon svg {
+  font-size: 36px;
+  opacity: 0.4;
+  color: #fff;
+}
+
+.dashboardBoxWrapper .dashboardBox .bottomEle {
+  position: relative;
+  top: 15px;
+}
+
+.dashboardBoxWrapper .dashboardBox .toggleIcon {
+  font-size: 22px;
+  color: #00000080;
+  cursor: pointer;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+
+.toggleIcon svg {
+  color: #fff !important;
+  font-size: 20px !important;
+  opacity: 1 !important;
+}
+
+/* Dashboard box end*/
+
+/* Header */
+
+header {
+  width: 85%;
+}
+.searchBox {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.searchBox:hover {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.searchBox input {
+  outline: none !important;
+  font-size: 14px;
+}
+
+.searchBox .searchIconHeader {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+
+header .part2 button {
+  min-width: 40px !important;
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 100% !important;
+  background: #f0f5ff !important;
+  color: #000;
+}
+
+header .part2 button svg {
+  font-size: 18px;
+  color: #292929;
+}
+
+.userImage {
+  overflow: hidden !important;
+  border-radius: 100%;
+  color: #2c78e5;
+}
+
+/* Header end*/
+
+/* Products create*/
+
+.imgUploadBoxWrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.imgUploadBoxWrapper .remove {
+  border-radius: 100%;
+  background: #d32f2f;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  z-index: 100;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.imgUploadBoxWrapper .remove svg {
+  font-size: 18px;
+  color: #fff;
+}
+.imgUploadBoxWrapper .remove:hover {
+  top: -8px;
+}
+
+.imgUploadBox {
+  border: 1px dashed rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+}
+
+.imgUploadBox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+}
+
+.imgUploadBox .icon {
+  font-size: 50px;
+  opacity: 1;
+}
+
+.imgUploadBox h4 {
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+/* Products create end */
+
+/* Auth */
+
+.AuthSection {
+  height: 100vh;
+  background: linear-gradient(180deg, #0099ff 0%, #33ccff 100%);
+}
+
+.AuthSection .css-1yafmis-MuiFormLabel-root-MuiInputLabel-root {
+  color: #FFF !important;
+}
+
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  animation-name: fall, sway;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.AuthSection .header {
+  padding: 0 25px;
+  width: 100%;
+}
+
+.AuthSection .header .logo {
+  width: 250px;
+  padding: 25px 3%;
+}
+
+.AuthSection .header .logo img {
+  height: 50px;
+}
+
+.AuthSection .btn-round {
+  border-radius: 50px !important;
+  padding: 7px 25px !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.AuthSection .btn-border {
+  border: 2px solid rgba(8, 8, 8, 0.7) !important;
+  color: #000 !important;
+  text-transform: capitalize !important;
+  padding: 7px 20px !important;
+}
+
+.AuthSection .header button svg {
+  font-size: 16px !important;
+}
+
+.AuthSection .btn-border svg {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.AuthSection button.btn-sigin:hover {
+  background-color: transparent !important;
+  border: 2px solid rgba(98, 98, 98, 0.5) !important;
+}
+
+.AuthSection .btn-blue {
+  background: #3872fa !important;
+  text-transform: capitalize !important;
+  padding: 7px 20px !important;
+  color: #fff !important;
+}
+
+.AuthSection button.btn-sigup {
+  border: 2px solid transparent !important;
+}
+
+.AuthSection button.btn-sigup:hover {
+  box-shadow: 0 0 10px rgba(2, 2, 2, 0.3) !important;
+}
+
+.container_auth {
+  padding: 35px 0;
+  width: 600px !important;
+  margin: auto;
+}
+
+.socialBtn button {
+  color: #494949;
+  font-size: 13px !important;
+  text-transform: capitalize;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.socialBtn button svg {
+  margin-right: 5px;
+  font-size: 25px;
+}
+
+.socialBtn button:hover * {
+  color: #3872fa !important;
+}
+
+.AuthSection .form .formPassword button {
+  position: absolute;
+  width: 45px !important;
+  height: 45px !important;
+  min-width: 45px !important;
+  color: #464646 !important;
+  border-radius: 100% !important;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  z-index: 100;
+}
+
+.AuthSection .form .formPassword button svg {
+  font-size: 25px !important;
+}
+
+.AuthSection .form label {
+  display: flex !important;
+  /* align-items: center !important; */
+}
+
+.AuthSection .form label.checkbox input {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.text {
+  font-weight: 600;
+}
+
+.text a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.btnAuthSend {
+  padding: 8px 20px !important;
+  background-color: #3872fa !important;
+}
+
+.btnAuthSend.btnOTP {
+  background-color: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.4) !important;
+}
+
+.btnAuthSend.btnOTP span {
+  color: #000 !important;
+}
+
+.btnAuthSend span {
+  color: #fff !important;
+  font-weight: 500 !important;
+  font-size: 19px;
+}
+
+.otpBox input {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  outline: none !important;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.otpBox input:focus {
+  border: 2px solid #3872fa;
+}
+
+/* Auth end */
+.productDetails.section {
+  padding: 45px 0;
+}
+
+.productDetails.section h2.hd {
+  font-size: 26px;
+  line-height: 36px;
+}
+
+.productDetails.section .text-gray {
+  color: gray;
+}
+
+.productDetails.section .btn-cart svg {
+  color: #fff;
+  font-size: 25px;
+}
+
+.productSize {
+  width: 100%;
+  height: auto;
+  padding: 10px 0px;
+}
+.productSize ul li {
+  margin-right: 10px !important;
+}
+.productSize ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #000;
+  font-size: 14px !important;
+  transition: all 0.1s ease-in-out;
+}
+
+.productSize ul li a:hover {
+  background-color: #ccc;
+}
+.productSize ul li a.active {
+  background: #233a95 !important;
+  color: #fff !important;
+}
+
+.btn-circle {
+  background: #edeef5 !important;
+  border: 1px solid #0000001a !important;
+  border-radius: 50% !important;
+  color: #000;
+  height: 40px !important;
+  min-width: 40px !important;
+  width: 40px !important;
+  text-transform: uppercase;
+  padding: 5px !important;
+}
+
+.btn-circle svg {
+  color: #000 !important;
+  opacity: 0.8;
+  font-size: 17px;
+}
+
+.btn-circle:hover {
+  background-color: #ccc !important;
+}
+
+/* productDetails End */
+
+/* detailsPageTabs */
+
+.detailsPageTabs {
+  padding: 35px 45px;
+  border-radius: 20px !important;
+}
+
+.detailsPageTabs .customTabs ul li button {
+  border: 1px solid #0003 !important;
+  border-radius: 30px !important;
+  color: #000 !important;
+  font-size: 14px !important;
+  padding: 6px 25px !important;
+  text-transform: capitalize !important;
+}
+
+.detailsPageTabs .customTabs ul li button.active {
+  border: 1px solid transparent !important;
+  background: #16b858 !important;
+  color: #fff !important;
+}
+
+.table-responsive {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.detailsPageTabs .tabContent h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.reviewBox {
+  border-bottom: 1px solid #0003 !important;
+}
+
+.reviewForm .form-group {
+  margin-bottom: 25px;
+}
+
+.reviewForm .form-group textarea.form-control {
+  height: 200px;
+  padding-top: 25px;
+}
+
+.reviewForm .form-group .form-control {
+  border-radius: 7px !important;
+  font-size: 16px;
+  height: 50px;
+  outline: none !important;
+  padding-left: 20px;
+}
+
+/* detailsPageTabs END*/
+
+
+/* HOME PRODUCTS */
+.homeProducts {
+  padding: 25px 0;
+  width: 100%;
+}
+
+.homeProducts .banner {
+  width: 100%;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.homeProducts .banner:last-child {
+  margin-top: 20px;
+}
+
+.hd {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.homeProducts .productRow .viewAllBtn {
+  padding: 5px 25px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #414141;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.homeProducts .productRow .viewAllBtn svg {
+  font-size: 20px;
+}
+
+.productItem {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: #f1f1f1;
+  border: 1px solid #0000001a;
+}
+
+.productItem,
+.productItem .imgWrapper {
+  border-radius: 10px !important;
+}
+
+.productItem .imgWrapper {
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+}
+
+.productItem .imgWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.productItem .imgWrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.1s ease-in-out;
+}
+
+.productItem .imgWrapper::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  transition: top 0.5s ease-in-out;
+}
+
+.productItem .imgWrapper:hover::before {
+  top: 100%;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: rotate(-3deg);
+  }
+  40% {
+    transform: rotate(3deg);
+  }
+  60% {
+    transform: rotate(-2deg);
+  }
+  80% {
+    transform: rotate(2deg);
+  }
+}
+
+.productItem .badge {
+  display: inline-block;
+  padding: 7px 10px;
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  z-index: 100;
+  background-color: #f92b40 !important;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  animation: shake 1s infinite;
+}
+
+.productItem .actions {
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  opacity: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.1s ease-in-out;
+}
+
+.productItem .imgWrapper:hover .actions {
+  opacity: 1;
+  right: 10px;
+}
+
+.productItem .actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px !important;
+  height: 40px !important;
+  width: 40px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+  transition: all 0.1s ease-in-out;
+}
+
+.productItem .actions button svg {
+  color: #000;
+  opacity: 0.8;
+  pointer-events: none;
+  font-size: 15px;
+}
+
+.productItem .actions button:hover {
+  background-color: #233a95 !important;
+}
+
+.productItem .actions button:hover svg {
+  color: #fff;
+}
+
+.productItem .infoProductItem h4 {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.productItem .infoProductItem {
+  padding: 15px;
+}
+
+.oldPrice {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.2);
+  text-decoration: line-through;
+}
+.oldPrice.lg {
+  font-size: 16px;
+}
+
+.newPrice {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.newPrice.lg {
+  font-size: 20px;
+}
+
+/* HOME PRODUCTS END */
+
